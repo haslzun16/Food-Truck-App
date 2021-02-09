@@ -3,14 +3,14 @@ import '@firebase/auth';
 import '@firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: 'AIzaSyBxGHYixNRHXakbnHjsw9qKcQjsb0JssUI',
-    authDomain: 'your-auth-domain-b1234.firebaseapp.com',
-    databaseURL: 'https://your-database-name.firebaseio.com',
-    projectId: 'foodtruck-a92cc',
-    storageBucket: 'your-project-id-1234.appspot.com',
-    messagingSenderId: '12345-insert-yourse',
-    appId: '1:233124233438:ios:afb05f5be9fdc7b83cc24f',
-  };
+  apiKey: "AIzaSyBxGHYixNRHXakbnHjsw9qKcQjsb0JssUI",
+  authDomain: "foodtruck-a92cc.firebaseapp.com",
+  projectId: "foodtruck-a92cc",
+  storageBucket: "foodtruck-a92cc.appspot.com",
+  messagingSenderId: "233124233438",
+  appId: "1:233124233438:web:1cdfddc68195cf453cc24f",
+  measurementId: "G-P5NE44M3M8"
+};
   
   
 
