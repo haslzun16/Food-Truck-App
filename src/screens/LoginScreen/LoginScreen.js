@@ -2,33 +2,38 @@ import React, { useState } from 'react'
 import { Image, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import styles from './styles';
-import {signIn} from '../../../API/firebaseAPI'
+import "firebase/firestore";
+import {Alert} from "react-native";
+import {AuthContext} from '../../../App'
+
+
 
 export default function LoginScreen({navigation}) {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
+   const { signIn } = React.useContext(AuthContext);
+    
     const onFooterLinkPress = () => {
         navigation.navigate('Registration')
     }
 
-    const onLoginPress = ({navigation}) => {
+    const onLoginPress = () => {
         if (!email) {
             Alert.alert('Email field is required.');
           }
       
           if (!password) {
             Alert.alert('Password field is required.');
+          }else{
+            signIn({email, password});
           }
-      
-          signIn(email, password);
-          setEmail('');
-          setPassword('');
-          navigation.navigate('Home');
 
+     };
+               
+    
           
-          
-    };
+    
 
     return (
         <View style={styles.container}>
